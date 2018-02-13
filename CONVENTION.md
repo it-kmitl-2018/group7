@@ -43,14 +43,14 @@ Class ConventionNote(){
 	ConventionNote(){}
   
 	ConventionNote(String args){
-        this.args = "HelloWorld";
+            this.args = "HelloWorld";
 	}
 
   	private int countVowel;
 
 	public int countVowels(String letter){
         //This method return total vowel found in letter
-        return countVowel;
+            return countVowel;
 	}
 }
 ```
