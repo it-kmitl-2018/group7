@@ -4,13 +4,13 @@
 
 Format ตัวแปร ใช้เป็น camelCase : Upper Camel Case สำหรับตั้งชื่อ Class, Lower สำหรับชื่อตัวแปรและ method
 
-เวลาเขียน Code ให้ทำงานได้ในระดับหนึ่งแล้วต้อง Refactor Code
+Refactor Code ทุกครั้งที่ทำเสร็จ
 
 เวลาเขียน Class, Method ให้ Comment ด้วยว่า มันทำอะไรในโค้ดแบบคร่าวๆ กันอ่านโค้ดไม่รู้เรื่อง
 
 การตั้งชื่อตัวแปร ให้อ่านรู้เรื่องมีความหมาย
 
-พยายามลบ Code ที่ไม่ได้ใช้งานออก (Unused code)
+ลบ Code ที่ไม่ได้ใช้งานออก (Unused code)
 
 ภายในเงื่อนไข loop ให้เว้นวรรคระหว่าง Operator และ Operand กับ semicolon
 
@@ -18,7 +18,7 @@ Format ตัวแปร ใช้เป็น camelCase : Upper Camel Case ส
 
 เขียน statement ละ 1 บรรทัด
 
-หาก statement ยาวเกินไปให้ขึ้นบรรทัดใหม่ และ Indent ให้เท่ากับ
+หาก statement ยาวเกิน 120 ตัวอักษรและให้ขึ้นบรรทัดใหม่ และ Indent ให้ตรงกัน
 
 เว้น 1 บรรทัดระหว่าง method
 
@@ -43,15 +43,13 @@ Class ConventionNote(){
 	ConventionNote(){}
   
 	ConventionNote(String args){
-      this.args = "HelloWorld";
+        this.args = "HelloWorld";
 	}
-  ```
-  ```
-  private int countVowel;
-  ```
-  ```
+
+  	private int countVowel;
+
 	public int countVowels(String letter){
-     //This method return total vowel found in letter
+        //This method return total vowel found in letter
         return countVowel;
 	}
 }
