@@ -12,7 +12,9 @@ import th.ac.kmitl.it.soa.group7.models.TaxInvoiceModel;
 
 @Controller // ใช้ Controller เพื่อส่ง HTML กลับมา
 public class TaxInvoiceController {
+	//TODO Mapping Controller of XML, JSON Converter
 	private TaxInvoiceModel taxInvoiceModel = new TaxInvoiceModel(); // ให้ Model คอยรับค่า
+	private JsonConverter JsonConverter = new JsonConverter();
 
 	@RequestMapping("/")
 	public String index() {// หน้าแรก return เป็น taxinvoice.html ให้
@@ -20,7 +22,7 @@ public class TaxInvoiceController {
 	}
 
 	@RequestMapping(value = "/submitForm", method = {RequestMethod.GET, RequestMethod.POST}) // ถ้าใช้ ResponseBody จะแสดง param
-	// Get parameter มาจาก form และใส่เข้าไปใน Tax Model
+	// Get parameter
 	public String getResponse(@RequestParam("documentTypeCode") String documentTypeCode, ModelMap modelMap) {
 		taxInvoiceModel.setDocumentTypeCode(documentTypeCode);
 		modelMap.put("documentTypeCode", documentTypeCode);
@@ -31,6 +33,20 @@ public class TaxInvoiceController {
 	@ResponseBody
 	public String showDetails() {
 		return taxInvoiceModel.getDocumentTypeCode() + " <<<< confirm!";
+	}
+
+	@RequestMapping(value = "/generateJSON")
+	public String generateXML(){
+		String jsonData;
+		jsonData = JsonConverter.toJson(taxInvoiceModel.getData());
+		return "jsonview.jsp";
+	}
+
+	@RequestMapping(value = "/generateXML")
+	public String generateXML(){
+		String xmlData;
+		xmlData = XmlConverter.toJson(taxInvoiceModel.getData());
+		return "xmlview.jsp";
 	}
 
 }
