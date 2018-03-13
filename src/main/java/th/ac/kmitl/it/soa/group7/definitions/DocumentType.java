@@ -2,6 +2,7 @@ package th.ac.kmitl.it.soa.group7.definitions;
 
 
 public class DocumentType { //Defines DocumentTypeCode
+	//TODO Rewrite to enum
 	
 	DocumentType(String typeCode, String description){}
 	
