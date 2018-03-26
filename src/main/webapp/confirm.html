@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Tax invoice</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+	<div>
+		<p th:text="'รหัสคู่มือมาตรฐาน : ' + ${taxModel.manualId}" />
+		<p th:text="'เลขที่เอกสาร : ' + ${taxModel.documentId}" />
+		<p th:text="'ชื่อเอกสาร : ' + ${taxModel.documentName}" />
+		<p th:text="'รหัสประเภทเอกสาร : ' + ${taxModel.documentTypeCode}" />
+		<p
+			th:text="'วัน เดือน ปี ที่ออกเอกสาร : ' + ${taxModel.issueDateTime}" />
+		<p th:text="'สาเหตุการออกเอกสาร: ' + ${taxModel.purpose}" />
+		<p th:text="'รหัสสาเหตุการออกเอกสาร : ' + ${taxModel.purposeCode}" />
+		<p th:text="'เลขที่เอกสารสากล: ' + ${taxModel.globalId}" />
+		<p
+			th:text="'วันเดือนปีและเวลาที่สร้างเอกสาร : ' + ${taxModel.creationDateTime}" />
+	</div>
+</body>
+</html>
