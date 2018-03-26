@@ -1,16 +1,37 @@
 package th.ac.kmitl.it.soa.group7.models;
 
+import org.springframework.ui.ModelMap;
+
 public class TaxInvoiceModel {// Collect Tax Invoice details
 	public TaxInvoiceModel() {
 	}
 
-	private String documentTypeCode;
-
-	public void setDocumentTypeCode(String documentTypeCode) {// Set typeCode
-		this.documentTypeCode = documentTypeCode;
+	public TaxInvoiceModel(String message) {
+		this.message = message;
 	}
 
-	public String getDocumentTypeCode() {// Get typeCode
-		return documentTypeCode;
+	public TaxInvoiceModel(HeaderContext headerContext) {
+		this.headerContext = headerContext;
 	}
+
+	private HeaderContext headerContext;
+
+	public HeaderContext getHeaderContext() {
+		return headerContext;
+	}
+
+	public void setHeaderContext(HeaderContext headerContext) {
+		this.headerContext = headerContext;
+	}
+
+	private String message;
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
 }
