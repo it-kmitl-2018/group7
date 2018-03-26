@@ -7,16 +7,22 @@
 </head>
 <body>
 	<div>
-		<form action="/taxok" method="post">
-			<br> รหัสคู่มือมาตรฐาน <input type="text" name="manualId"
-				value="" size="35" /> <br> เลขที่เอกสาร <input type="text"
-				name="documentId" value="" size="35" /> <br> ชื่อเอกสาร <input
-				type="text" name="documentName" value="" size="35" /> <br>
-			รหัสประเภทเอกสาร <input type="text" name="documentTypeCode" value=""
-				size="35" /> <br> วัน เดือน ปี ที่ออกเอกสาร <br>
-			สาเหตุการออกเอกสาร <br> รหัสสาเหตุการออกเอกสาร เลขที่เอกสารสากล
-			<br> <br> วันเดือนปีและเวลาที่สร้างเอกสาร <br> <input
-				type="submit" value="Next" />
+		<form action="/confirm" method="post">
+			รหัสคู่มือมาตรฐาน <br> <input type="text" name="manualId"
+				value="" size="35" /><br> เลขที่เอกสาร <br> <input
+				type="text" name="documentId" value="" size="35" /><br>
+			ชื่อเอกสาร <br> <input type="text" name="documentName" value=""
+				size="35" /> <br> รหัสประเภทเอกสาร <br> <input
+				type="text" name="documentTypeCode" value="" size="35" /> <br>
+			วัน เดือน ปี ที่ออกเอกสาร <br> <input type="text"
+				name="issueDateTime" /> <br> สาเหตุการออกเอกสาร<br> <input
+				type="text" name="purpose" size="256" /> <br>
+			รหัสสาเหตุการออกเอกสาร <br> <input type="text"
+				name="purposeCode" /><br> เลขที่เอกสารสากล<br> <input
+				type="text" name="globalId" size="70" /> <br>
+			วันเดือนปีและเวลาที่สร้างเอกสาร <br> <input type="text"
+				name="creationDateTime" /> <br> <br> <input type="submit"
+				value="Next" />
 		</form>
 	</div>
 </body>
