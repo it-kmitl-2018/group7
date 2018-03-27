@@ -1,8 +1,6 @@
 package th.ac.kmitl.it.soa.group7.models;
 
-import org.springframework.ui.ModelMap;
-
-public class TaxInvoiceModel {// Collect Tax Invoice details
+public class TaxInvoiceModel {
 	public TaxInvoiceModel() {
 	}
 
