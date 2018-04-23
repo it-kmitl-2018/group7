@@ -9,17 +9,19 @@
 	<div>
 		<form action="/generate" method="post">
 
-			<p th:text="'รหัสคู่มือมาตรฐาน : ' + ${taxModel.manualId}" />
-			<p th:text="'เลขที่เอกสาร : ' + ${taxModel.documentId}" />
-			<p th:text="'ชื่อเอกสาร : ' + ${taxModel.documentName}" />
-			<p th:text="'รหัสประเภทเอกสาร : ' + ${taxModel.documentTypeCode}" />
+			<p th:text="'รหัสคู่มือมาตรฐาน : ' + ${manualId}" />
+			<p th:text="'เลขที่เอกสาร : ' + ${documentId}" />
+			<p th:text="'ชื่อเอกสาร : ' + ${documentName}" />
 			<p
-				th:text="'วัน เดือน ปี ที่ออกเอกสาร : ' + ${taxModel.issueDateTime}" />
-			<p th:text="'สาเหตุการออกเอกสาร: ' + ${taxModel.purpose}" />
-			<p th:text="'รหัสสาเหตุการออกเอกสาร : ' + ${taxModel.purposeCode}" />
-			<p th:text="'เลขที่เอกสารสากล: ' + ${taxModel.globalId}" />
+				th:text="'รหัสประเภทเอกสาร : ' + ${documentTypeCode}" />
 			<p
-				th:text="'วันเดือนปีและเวลาที่สร้างเอกสาร : ' + ${taxModel.creationDateTime}" />
+				th:text="'วัน เดือน ปี ที่ออกเอกสาร : ' + ${issueDateTime}" />
+			<p th:text="'สาเหตุการออกเอกสาร: ' + ${purpose}" />
+			<p
+				th:text="'รหัสสาเหตุการออกเอกสาร : ' + ${purposeCode}" />
+			<p th:text="'เลขที่เอกสารสากล: ' + ${globalId}" />
+			<p
+				th:text="'วันเดือนปีและเวลาที่สร้างเอกสาร : ' + ${creationDateTime}" />
 			<br> <input type="submit" value="XML" /> <input type="submit"
 				value="JSON" />
 		</form>
