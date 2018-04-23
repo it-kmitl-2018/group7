@@ -1,17 +1,9 @@
 package th.ac.kmitl.it.soa.group7.models;
 
-import org.springframework.ui.ModelMap;
-
 public class HeaderContext {
 
 	public HeaderContext() {
 	}
-
-	public HeaderContext(String[] documentType) {
-		this.documentType = documentType;
-	}
-
-	private String[] documentType;
 
 	private String manualId;
 	private String documentId;
@@ -22,27 +14,6 @@ public class HeaderContext {
 	private String purposeCode;
 	private String globalId;
 	private String creationDateTime;
-	private ModelMap modelMap;
-
-	public ModelMap getModelMap() {
-		return modelMap;
-	}
-
-	public void setModelMap(ModelMap modelMap) {
-		this.modelMap = modelMap;
-	}
-
-	public void setParameterFromHtml(ModelMap modelMap) {
-		this.manualId = (String) modelMap.get(manualId);
-		this.documentId = (String) modelMap.get(documentId);
-		this.documentName = (String) modelMap.get(documentName);
-		this.documentTypeCode = (String) modelMap.get(documentTypeCode);
-		this.issueDateTime = (String) modelMap.get(issueDateTime);
-		this.purpose = (String) modelMap.get(purpose);
-		this.purposeCode = (String) modelMap.get(purposeCode);
-		this.globalId = (String) modelMap.get(globalId);
-		this.creationDateTime = (String) modelMap.get(creationDateTime);
-	}
 
 	public String getManualId() {
 		return manualId;
@@ -114,14 +85,6 @@ public class HeaderContext {
 
 	public void setCreationDateTime(String creationDateTime) {
 		this.creationDateTime = creationDateTime;
-	}
-
-	public String[] getDocumentType() {
-		return documentType;
-	}
-
-	public void setDocumentType(String[] documentType) {
-		this.documentType = documentType;
 	}
 
 }
