@@ -1,7 +1,8 @@
 package th.ac.kmitl.it.soa.group7.definitions;
+import lombok.RequiredArgsConstructor;
 
-
-public class DocumentType { //Defines DocumentTypeCode
+@RequiredArgsConstructor
+public enum DocumentType { //Defines DocumentTypeCode
 	//TODO Rewrite to enum
 	
 	DocumentType(String typeCode, String description){}

@@ -1,5 +1,8 @@
+package th.ac.kmitl.it.soa.group7.converters;
 
-public Class JsonConverter{
+import th.ac.kmitl.it.soa.group7.models.TaxInvoiceModel;
+
+public class JsonConverter{
 	//TODO Create toJSON method
 	public JsonConverter(){}
 	
@@ -8,7 +11,6 @@ public Class JsonConverter{
 	}
 
 	private TaxInvoiceModel taxInvoiceModel;
-	private String data = taxInvoiceModel.getData();
 
 	public String toJson(String data){
 		return "This is JSON";

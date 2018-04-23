@@ -1,16 +1,20 @@
 package th.ac.kmitl.it.soa.group7.models;
 
-public class TaxInvoiceModel {// Collect Tax Invoice details
+public class TaxInvoiceModel {
 	public TaxInvoiceModel() {
 	}
 
-	private String documentTypeCode;
-
-	public void setDocumentTypeCode(String documentTypeCode) {// Set typeCode
-		this.documentTypeCode = documentTypeCode;
+	public TaxInvoiceModel(HeaderContext headerContext) {
+		this.headerContext = headerContext;
 	}
 
-	public String getDocumentTypeCode() {// Get typeCode
-		return documentTypeCode;
+	private HeaderContext headerContext;
+
+	public HeaderContext getHeaderContext() {
+		return headerContext;
+	}
+
+	public void setHeaderContext(HeaderContext headerContext) {
+		this.headerContext = headerContext;
 	}
 }

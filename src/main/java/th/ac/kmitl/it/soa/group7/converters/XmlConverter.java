@@ -1,5 +1,8 @@
+package th.ac.kmitl.it.soa.group7.converters;
 
-public Class XmlConverter{
+import th.ac.kmitl.it.soa.group7.models.TaxInvoiceModel;
+
+public class XmlConverter{
 	//TODO Create toXML method
 	public XmlConverter(){}
 	
@@ -8,7 +11,7 @@ public Class XmlConverter{
 	}
 
 	private TaxInvoiceModel taxInvoiceModel;
-	private String data = taxInvoiceModel.getData();
+
 
 	public String toXML(String data){
 		return "Take my XML";
