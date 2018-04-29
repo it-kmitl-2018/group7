@@ -16,14 +16,14 @@ import th.ac.kmitl.it.soa.group7.controllers.TaxInvoiceController;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class TaxInvoiceApplicationTests {
+public class TaxInvoiceControllerTests {
 	// Test e-Tax Invoice Application
 	TaxInvoiceController taxInvoiceController = new TaxInvoiceController();
 
 	@Test
 	public void inputParameterWillGetValidParameter() {
 		// True
-		Map map = new HashMap();
+		Map<String, String> map = new HashMap<String, String>();
 		map.put("username", "user1");
 		ModelMap model = new ModelMap();
 		model.addAllAttributes(map);
@@ -34,7 +34,7 @@ public class TaxInvoiceApplicationTests {
 	@Test
 	public void inputParameterWillGetInvalidParameter() {
 		// False
-		Map map = new HashMap();
+		Map<String, String> map = new HashMap<String, String>();
 		map.put("username", "user555");
 		ModelMap model = new ModelMap();
 		taxInvoiceController.create(map, model);
