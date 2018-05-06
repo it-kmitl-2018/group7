@@ -1,6 +1,6 @@
 package th.ac.kmitl.it.soa.group7.models;
 
-public class NoteInformation {
+public class IncludedNote {
 	private String subject;
 	private String content;
 	
