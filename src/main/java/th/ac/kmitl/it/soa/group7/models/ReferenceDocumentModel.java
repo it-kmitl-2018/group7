@@ -1,6 +1,5 @@
 package th.ac.kmitl.it.soa.group7.models;
 
-
 public class ReferenceDocumentModel {
     private String referenceDocumentId;
     private String referenceDocumentDate;
@@ -29,7 +28,4 @@ public class ReferenceDocumentModel {
     public void setReferenceDocTypeCode(String ReferenceDocTypeCode) {
         this.referenceDocumentTypeCode = ReferenceDocTypeCode;
     }
-    
-    
-    
 }
