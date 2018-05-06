@@ -30,8 +30,8 @@ public class ReferenceDocumentModelTest {
     
     @Test
     private void referenceDocIdGetTest(){
-        referenceDocumentModel.setReferenceDocId("sd13549");
-        assertEquals("sd13549", referenceDocumentModel.getReferenceDocId());
+        referenceDocumentModel.setReferenceDocId("ABCDEFGHIJKLMNOPQRST123456789012345");
+        assertEquals("ABCDEFGHIJKLMNOPQRST123456789012345", referenceDocumentModel.getReferenceDocId());
     }
     
     @Test
@@ -41,8 +41,8 @@ public class ReferenceDocumentModelTest {
     
     @Test
     private void referenceDocDateGetTest(){
-        referenceDocumentModel.setReferenceDocDate("25-12-2561");
-        assertEquals("25-12-2561", referenceDocumentModel.getReferenceDocDate());
+        referenceDocumentModel.setReferenceDocDate("2002-07-21T08:35:30");
+        assertEquals("2002-07-21T08:35:30", referenceDocumentModel.getReferenceDocDate());
     }
     
     @Test
@@ -52,7 +52,7 @@ public class ReferenceDocumentModelTest {
     
     @Test
     private void referenceDocTypeCodeGetTest(){
-        referenceDocumentModel.setReferenceDocTypeCode("SDAJJ598743");
-        assertEquals("SDAJJ598743", referenceDocumentModel.getReferenceDocTypeCode());
+        referenceDocumentModel.setReferenceDocTypeCode("ALQ");
+        assertEquals("ALQ", referenceDocumentModel.getReferenceDocTypeCode());
     }
 }
