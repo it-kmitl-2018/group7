@@ -1,20 +1,20 @@
 package th.ac.kmitl.it.soa.group7.models;
 
 public class BuyerInformation {
-	public String buyerTaxId;
+	public String taxId;
 	public String storeBranch;
-	public String buyerNameEng;
-	public String buyerNameTh;
-	public String buyerEmail;
-	public String buyerTelephone;
-	public String buyerFax;
+	public String nameEng;
+	public String nameTh;
+	public String email;
+	public String telephone;
+	public String fax;
 	
-	public String getBuyerTaxId() {
-		return buyerTaxId;
+	public String getTaxId() {
+		return taxId;
 	}
 	
-	public void setBuyerTaxId(String buyerTaxId) {
-		this.buyerTaxId = buyerTaxId;
+	public void setTaxId(String taxId) {
+		this.taxId = taxId;
 	}
 	
 	public String getStoreBranch() {
@@ -25,44 +25,44 @@ public class BuyerInformation {
 		this.storeBranch = storeBranch;
 	}
 	
-	public String getBuyerNameEng() {
-		return buyerNameEng;
+	public String getNameEng() {
+		return nameEng;
 	}
 	
-	public void setBuyerNameEng(String buyerNameEng) {
-		this.buyerNameEng = buyerNameEng;
+	public void setNameEng(String nameEng) {
+		this.nameEng = nameEng;
 	}
 	
-	public String getBuyerNameTh() {
-		return buyerNameTh;
+	public String getNameTh() {
+		return nameTh;
 	}
 	
-	public void setBuyerNameTh(String buyerNameTh) {
-		this.buyerNameTh = buyerNameTh;
+	public void setNameTh(String nameTh) {
+		this.nameTh = nameTh;
 	}
 	
-	public String getBuyerEmail() {
-		return buyerEmail;
+	public String getEmail() {
+		return email;
 	}
 	
-	public void setBuyerEmail(String buyerEmail) {
-		this.buyerEmail = buyerEmail;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
-	public String getBuyerTelephone() {
-		return buyerTelephone;
+	public String getTelephone() {
+		return telephone;
 	}
 	
-	public void setBuyerTelephone(String buyerTelephone) {
-		this.buyerTelephone = buyerTelephone;
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
 	}
 	
-	public String getBuyerFax() {
-		return buyerFax;
+	public String getFax() {
+		return fax;
 	}
 	
-	public void setBuyerFax(String buyerFax) {
-		this.buyerFax = buyerFax;
+	public void setFax(String fax) {
+		this.fax = fax;
 	}
 	
 }
