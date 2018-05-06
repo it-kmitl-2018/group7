@@ -2,32 +2,32 @@ package th.ac.kmitl.it.soa.group7.models;
 
 
 public class ReferenceDocumentModel {
-    private String referenceDocId; //เลขที่ใบเอกสารอ้างอิง
-    private String referenceDocDate; //วัน-เดือน-ปี ที่ออกใบเอกสารอ้างอิง
-    private String referenceDocTypeCode; //รหัสเอกสารอ้างอิง
+    private String referenceDocumentId;
+    private String referenceDocumentDate;
+    private String referenceDocumentTypeCode;
 
     public String getReferenceDocId() {
-        return referenceDocId;
+        return referenceDocumentId;
     }
 
     public void setReferenceDocId(String ReferenceDocId) {
-        this.referenceDocId = ReferenceDocId;
+        this.referenceDocumentId = ReferenceDocId;
     }
 
     public String getReferenceDocDate() {
-        return referenceDocDate;
+        return referenceDocumentDate;
     }
 
     public void setReferenceDocDate(String ReferenceDocDate) {
-        this.referenceDocDate = ReferenceDocDate;
+        this.referenceDocumentDate = ReferenceDocDate;
     }
 
     public String getReferenceDocTypeCode() {
-        return referenceDocTypeCode;
+        return referenceDocumentTypeCode;
     }
 
     public void setReferenceDocTypeCode(String ReferenceDocTypeCode) {
-        this.referenceDocTypeCode = ReferenceDocTypeCode;
+        this.referenceDocumentTypeCode = ReferenceDocTypeCode;
     }
     
     
