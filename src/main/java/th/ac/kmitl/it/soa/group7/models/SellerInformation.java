@@ -1,68 +1,68 @@
 package th.ac.kmitl.it.soa.group7.models;
 
 public class SellerInformation {
-	public String sellerTaxId;
-	public String storeBranch;
-	public String sellerNameEng;
-	public String sellerNameTh;
-	public String sellerEmail;
-	public String sellerTelephone;
-	public String sellerFax;
+	public String taxId;
+	public String branch;
+	public String nameEng;
+	public String nameTh;
+	public String email;
+	public String telephone;
+	public String fax;
 
-	public String getSellerTaxId() {
-		return sellerTaxId;
+	public String getTaxId() {
+		return taxId;
 	}
 
-	public void setSellerTaxId(String sellerId) {
-		this.sellerTaxId = sellerId;
+	public void setTaxId(String taxId) {
+		this.taxId = taxId;
 	}
 
-	public String getStoreBranch() {
-		return storeBranch;
+	public String getBranch() {
+		return branch;
 	}
 
-	public void setStoreBranch(String storeBranch) {
-		this.storeBranch = storeBranch;
+	public void setBranch(String branch) {
+		this.branch = branch;
 	}
 
-	public String getSellerNameEng() {
-		return sellerNameEng;
+	public String getNameEng() {
+		return nameEng;
 	}
 
-	public void setSellerNameEng(String sellerNameEng) {
-		this.sellerNameEng = sellerNameEng;
+	public void setNameEng(String nameEng) {
+		this.nameEng = nameEng;
 	}
 
-	public String getSellerNameTh() {
-		return sellerNameTh;
+	public String getNameTh() {
+		return nameTh;
 	}
 
-	public void setSellerNameTh(String sellerNameTh) {
-		this.sellerNameTh = sellerNameTh;
+	public void setNameTh(String nameTh) {
+		this.nameTh = nameTh;
 	}
 
-	public String getSellerEmail() {
-		return sellerEmail;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setSellerEmail(String sellerEmail) {
-		this.sellerEmail = sellerEmail;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public String getSellerTelephone() {
-		return sellerTelephone;
+	public String getTelephone() {
+		return telephone;
 	}
 
-	public void setSellerTelephone(String sellerTelephone) {
-		this.sellerTelephone = sellerTelephone;
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
 	}
 
-	public String getSellerFax() {
-		return sellerFax;
+	public String getFax() {
+		return fax;
 	}
 
-	public void setSellerFax(String sellerFax) {
-		this.sellerFax = sellerFax;
+	public void setFax(String fax) {
+		this.fax = fax;
 	}
 
 }
