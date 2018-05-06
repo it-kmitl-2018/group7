@@ -17,13 +17,13 @@ public class BuyerInformationTests {
 		buyerInfo.setBuyerTelephone("02-1655555");
 		buyerInfo.setBuyerFax("02-1655555");
 
-		Assert.assertEquals(buyerInfo.getBuyerTaxId(), "0105522022883");
+		Assert.assertEquals(buyerInfo.getBuyerTaxId(), "0107536000986");
 		Assert.assertEquals(buyerInfo.getStoreBranch(), "00000");
-		Assert.assertEquals(buyerInfo.getBuyerNameEng(), "TOYOTA THONBURI CO, LTD.");
-		Assert.assertEquals(buyerInfo.getBuyerNameTh(), "บริษัท โตโยต้า ธนบุรี จำกัด");
-		Assert.assertEquals(buyerInfo.getBuyerEmail(), "sales@toyotathonburi.com");
-		Assert.assertEquals(buyerInfo.getBuyerTelephone(), "02-4799009");
-		Assert.assertEquals(buyerInfo.getBuyerFax(), "02-4799009");
+		Assert.assertEquals(buyerInfo.getBuyerNameEng(), "Kiatnakin Bank Public Company Limited");
+		Assert.assertEquals(buyerInfo.getBuyerNameTh(), "ธนาคารเกียรตินาคิน จำกัด (มหาชน)");
+		Assert.assertEquals(buyerInfo.getBuyerEmail(), "contact@kiatnakin.co.th");
+		Assert.assertEquals(buyerInfo.getBuyerTelephone(), "02-1655555");
+		Assert.assertEquals(buyerInfo.getBuyerFax(), "02-1655555");
 
 	}
 	
