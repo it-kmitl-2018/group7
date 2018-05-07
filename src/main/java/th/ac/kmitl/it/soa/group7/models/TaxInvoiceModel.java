@@ -20,23 +20,25 @@ public class TaxInvoiceModel {
 	private AddressInformation buyerAddressInformation;
 	private List<Object> list;
 
-	public List<Object> getItem() {
-		return list;
+	/*
+	 * public List<Object> getSeller() { return list; }
+	 */
+	public SellerInformation getSeller() {
+		return sellerInfo;
 	}
 
-	public Object getTaxInvoice() {
-		return taxInvoiceModel;
+	public BuyerInformation getBuyer() {
+		return buyerInfo;
 	}
-
-	public void setDocumentTypeCode(String documentTypeCode) {
-		this.documentTypeCode = documentTypeCode;
-	}
-
-	public String getDocumentTypeCode() {
-		return documentTypeCode;
+	
+	//TODO implement Header to model
+	public Object getNumber() {
+		return "Tax invoice No. from Header";
 	}
 
 	public void setItem(BuyerInformation buyerInfo, SellerInformation sellerInfo) {
+		this.sellerInfo = sellerInfo;
+		this.buyerInfo = buyerInfo;
 		this.list.add(sellerInfo);
 		this.list.add(buyerInfo);
 	}
