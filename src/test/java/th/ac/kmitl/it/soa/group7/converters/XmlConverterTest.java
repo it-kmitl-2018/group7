@@ -1,9 +1,9 @@
 package th.ac.kmitl.it.soa.group7.converters;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 class XmlConverterTest {
 
@@ -25,6 +25,6 @@ class XmlConverterTest {
     public void shouldGetCorrectXml() {
         XmlConverter xmlConverter = new XmlConverter();
 
-        Assert.assertEquals(xml, xmlConverter.toXml(new Xml()));
+        assertEquals(xml, xmlConverter.toXml(new Xml()));
     }
 }
