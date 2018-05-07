@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class AddressTest {
+class AddressJsonConverterTest {
 
     private String lineOne = "สำนักงานใหญ่ เลขที่ 313/1";
     private String lineTwo = "ถนนรัชดาภิเษก แขวงบุคลโล เขตธนบุรี กรุงเทพมหานคร 10600";
@@ -16,7 +16,7 @@ class AddressTest {
 
     @Test
     public void shouldGetAllInfo() {
-        Address address = Address.builder()
+        AddressJsonConverter address = AddressJsonConverter.builder()
                 .lineOne(this.lineOne)
                 .lineTwo(this.lineTwo)
                 .cityName(this.cityName)
