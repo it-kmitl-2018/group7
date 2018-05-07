@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
+import th.ac.kmitl.it.soa.group7.converters.JsonConverter;
 
 
 class JsonConverterTest {
