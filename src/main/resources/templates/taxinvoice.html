@@ -1,29 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <title>Tax invoice</title>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+::-webkit-scrollbar-track {
+	background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #d6d6c2;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #ffffff;
+}
+</style>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
 </head>
 <body>
-	<div>
-		<form action="/confirm" method="post">
-			รหัสคู่มือมาตรฐาน <br> <input type="text" name="manualId"
-				value="" size="35" /><br> เลขที่เอกสาร <br> <input
-				type="text" name="documentId" value="" size="35" /><br>
-			ชื่อเอกสาร <br> <input type="text" name="documentName" value=""
-				size="35" /> <br> รหัสประเภทเอกสาร <br> <input
-				type="text" name="documentTypeCode" value="" size="35" /> <br>
-			วัน เดือน ปี ที่ออกเอกสาร <br> <input type="text"
-				name="issueDateTime" /> <br> สาเหตุการออกเอกสาร<br> <input
-				type="text" name="purpose" size="256" /> <br>
-			รหัสสาเหตุการออกเอกสาร <br> <input type="text"
-				name="purposeCode" /><br> เลขที่เอกสารสากล<br> <input
-				type="text" name="globalId" size="70" /> <br>
-			วันเดือนปีและเวลาที่สร้างเอกสาร <br> <input type="text"
-				name="creationDateTime" /> <br> <br> <input type="submit"
-				value="Next" />
-		</form>
+	<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+		<div class="container" style="margin-left: 10px;">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#"><h1>ใบกำกับภาษีอิเล็กทรอนิกส์</h1></a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="form-group"
+			style="position: absolute; margin-left: 50px; margin-top: 10px;">
+			<h1>ผู้ซื้อ</h1>
+			หมายเลขภาษี: <input type="text" id="buyerTaxNumber"
+				name="buyerTaxNumber" /><br> หมายเลขสาขา: <input type="text"
+				id="buyerBranchNumber" name="buyerBranchNumber" /><br>
+			ชื่อผู้ซื้อ(ภาษาอังกฤษ): <input type="text" id="buyerNameEng"
+				name="buyerNameEng" /><br> ชื่อผู้ซื้อ(ภาษาไทย): <input
+				type="text" id="buyerNameThai" name="buyerNameThai" /><br> อีเมล:
+			<input type="text" id="buyerEmail" name="buyerEmail"
+				placeholder="name@example.com" /><br> เบอร์โทรศัพท์: <input
+				type="text" id="buyerTelePhone" name="buyerTelePhone" /><br>
+			แฟกซ์: <input type="text" id="buyerFax" name="buyerFax" /><br>
+		</div>
+		<div class="form-group"
+			style="position: absolute; margin-left: 650px; margin-top: 10px;">
+			<h1>ผู้ขาย</h1>
+			หมายเลขภาษี: <input type="text" id="sellerTaxNumber"
+				name="sellerTaxNumber" /><br> หมายเลขสาขา: <input type="text"
+				id="sellerBranchNumber" name="sellerBranchNumber" /><br>
+			ชื่อผู้ขาย(ภาษาอังกฤษ): <input type="text" id="sellerNameEng"
+				name="sellerNameEng" /><br> ชื่อผู้ขาย(ภาษาไทย): <input
+				type="text" id="sellerNameThai" name="sellerNameThai" /><br>
+			อีเมล: <input type="text" id="sellerEmail" name="sellerEmail"
+				placeholder="name@example.com" /><br> เบอร์โทรศัพท์: <input
+				type="text" id="sellerTelePhone" name="sellerTelePhone" /><br>
+			แฟกซ์: <input type="text" id="sellerFax" name="sellerFax" /><br>
+		</div>
 	</div>
+	<div class="container" style="margin-top: 600px;">
+		<button type="submit" class="btn btn-primary">ตกลง</button>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+		integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+		crossorigin="anonymous"></script>
 </body>
 </html>
