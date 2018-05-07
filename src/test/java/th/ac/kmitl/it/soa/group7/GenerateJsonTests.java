@@ -10,29 +10,6 @@ import th.ac.kmitl.it.soa.group7.models.SellerInformation;
 import th.ac.kmitl.it.soa.group7.models.TaxInvoiceModel;
 
 public class GenerateJsonTests {
-	private static final String JSON_EXAMPLE = "[\r\n" + "    {\r\n" + "        \"taxId\" : \"INV-123456\",\r\n"
-			+ "        \"branch\" : \"00000\",\r\n" + "        \"nameEng\" : \"Beedle\",\r\n"
-			+ "        \"nameTh\" : \"ไทยแลนด์\",\r\n" + "        \"email\" : \"hello@mail.com\",\r\n"
-			+ "        \"telephone\" : \"06-5507-9511\",\r\n" + "        \"fax\" : \"06-5507-9511\",\r\n"
-			+ "        \"addressInformation\" : {\r\n"
-			+ "            \"addressLineOne\" : \"สำนักงานใหญ่ เลขที่ 313/1\",\r\n"
-			+ "            \"addressLineTwo\" : \"ถนนรัชดาภิเษก แขวงบุคลโล เขตธนบุรี กรุงเทพมหานคร 10600\",\r\n"
-			+ "            \"cityName\" : \"ธนบุรี\",\r\n" + "            \"citySubDivision\" : \"บุคคโล\",\r\n"
-			+ "            \"postCode\" : \"10600\",\r\n"
-			+ "            \"countrySubDivision\" : \"กรุงเทพมหานคร\",\r\n" + "            \"countryName\" : \"TH\"\r\n"
-			+ "        }\r\n" + "    },\r\n" + "    {\r\n" + "        \"taxId\" : \"0107536000986\",\r\n"
-			+ "        \"storeBranch\" : \"00000\",\r\n"
-			+ "        \"nameEng\" : \"Kiatnakin Bank Public Company Limited\",\r\n"
-			+ "        \"nameTh\" : \"ธนาคารเกียรตินาคิน จำกัด (มหาชน)\",\r\n"
-			+ "        \"email\" : \"contact@kiatnakin.co.th\",\r\n" + "        \"telephone\" : \"02-1655555\",\r\n"
-			+ "        \"fax\" : \"02-1655555\",\r\n" + "        \"addressInformation\" : {\r\n"
-			+ "            \"addressLineOne\" : \"500 ถนนเพลินจิต\",\r\n"
-			+ "            \"addressLineTwo\" : \"แขวงลุมพินี เขตปทุมวัน กรุงเทพมหานคร 10330\",\r\n"
-			+ "            \"cityName\" : \"ปทุมวัน\",\r\n" + "            \"citySubDivision\" : \"ลุมพินี\",\r\n"
-			+ "            \"postCode\" : \"10330\",\r\n"
-			+ "            \"countrySubDivision\" : \"กรุงเทพมหานคร\",\r\n" + "            \"countryName\" : \"TH\"\r\n"
-			+ "        }\r\n" + "    }\r\n" + "]";
-
 	@Test
 	public void GenerateObjectToJson() {
 		JsonConverter jsc = new JsonConverter();
@@ -78,9 +55,10 @@ public class GenerateJsonTests {
 		sli.setAddressInformation(sellerAddressInfo);
 		// Add to Tax invoice model
 		tax.setItem(bli, sli);
-		// Assert.assertEquals(jsc.toJson(tax.getItem()), JSON_EXAMPLE);
 
-		// System.out.println(jsc.toJson(tax.getItem()));
+		Assert.assertNotNull(tax);
+		Assert.assertEquals(jsc.toJson("seller, A, B, C"), '"' + "seller, A, B, C" + '"');
+
 		System.out.println(jsc.toJson(tax));
 	}
 }
