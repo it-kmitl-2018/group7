@@ -1,41 +1,46 @@
 package th.ac.kmitl.it.soa.group7;
 
 import static org.assertj.core.api.Assertions.assertThat;
-
-import java.util.HashMap;
-import java.util.Map;
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.ui.ModelMap;
+import org.springframework.test.web.servlet.MockMvc;
 
 import th.ac.kmitl.it.soa.group7.controllers.TaxInvoiceController;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@AutoConfigureMockMvc
 public class TaxInvoiceControllerTests {
-	TaxInvoiceController taxInvoiceController = new TaxInvoiceController();
+	@Autowired
+	private TaxInvoiceController taxInvoiceController;
 
 	@Test
-	public void inputParameterWillGetValidParameter() {
-		// True
-		Map<String, String> map = new HashMap<String, String>();
-		map.put("username", "user1");
-		ModelMap model = new ModelMap();
-		model.addAllAttributes(map);
-		taxInvoiceController.create(map, model);
-		assertThat(model.get("username")).isEqualTo("user1");
+	public void contexLoads() throws Exception {
+		assertThat(taxInvoiceController).isNotNull();
+	}
+
+	@Autowired
+	private MockMvc mockMvc;
+
+	@Test
+	public void shouldHaveTaxInvoicePage() throws Exception {
+		this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
+				.andExpect(content().string(containsString("Tax invoice")));
 	}
 
 	@Test
-	public void inputParameterWillGetInvalidParameter() {
-		// False
-		Map<String, String> map = new HashMap<String, String>();
-		map.put("username", "user555");
-		ModelMap model = new ModelMap();
-		taxInvoiceController.create(map, model);
-		assertThat(model.get("username")).isNotEqualTo("user1");
+	public void shouldHaveTaxInvoiceConfirmPage() throws Exception {
+		this.mockMvc.perform(get("/confirm")).andDo(print()).andExpect(status().isOk())
+				.andExpect(content().string(containsString("Tax invoice")));
 	}
 }
