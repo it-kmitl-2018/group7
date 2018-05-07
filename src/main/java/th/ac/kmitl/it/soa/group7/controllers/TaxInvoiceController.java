@@ -21,7 +21,7 @@ public class TaxInvoiceController {
 		return "taxinvoice";
 	}
 
-	@PostMapping(path = "/confirm") // GetParameter and set to HeaderContext
+	@PostMapping(path = "/confirm")
 	public String create(@RequestParam Map<String, String> allRequestParam, ModelMap model) {
 		model.addAllAttributes(allRequestParam);
 		return "confirm";
