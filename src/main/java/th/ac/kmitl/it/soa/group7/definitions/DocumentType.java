@@ -3,8 +3,7 @@ package th.ac.kmitl.it.soa.group7.definitions;
 import lombok.Getter;
 
 public enum DocumentType {	
-
-	DEBIT_NOTE ("80", "ใบเพิ่มหนี้ (Debit note)"),
+    DEBIT_NOTE ("80", "ใบเพิ่มหนี้ (Debit note)"),
     CREDIT_NOTE ("81", "ใบลดหนี้ (Credit note)"),
     INVOICE ("380", "ใบแจ้งหนี้ (Invoice)"),
     TAX_INVOICE ("388", "ใบกำกับภาษี (Tax Invoice)"),
