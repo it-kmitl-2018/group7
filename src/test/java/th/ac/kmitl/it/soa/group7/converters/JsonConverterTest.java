@@ -1,13 +1,12 @@
 package th.ac.kmitl.it.soa.group7.converters;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class JsonConverterTest {
 
@@ -30,6 +29,6 @@ class JsonConverterTest {
     public void shouldGetCorrectJson() {
         JsonConverter jsonConverter = new JsonConverter();
 
-        Assert.assertEquals(json, jsonConverter.toJson(new Json()));
+        assertEquals(json, jsonConverter.toJson(new Json()));
     }
 }
