@@ -20,9 +20,6 @@ public class TaxInvoiceModel {
 	private AddressInformation buyerAddressInformation;
 	private List<Object> list;
 
-	/*
-	 * public List<Object> getSeller() { return list; }
-	 */
 	public SellerInformation getSeller() {
 		return sellerInfo;
 	}
@@ -30,7 +27,7 @@ public class TaxInvoiceModel {
 	public BuyerInformation getBuyer() {
 		return buyerInfo;
 	}
-	
+
 	//TODO implement Header to model
 	public Object getNumber() {
 		return "Tax invoice No. from Header";
