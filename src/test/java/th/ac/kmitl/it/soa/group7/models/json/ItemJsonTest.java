@@ -42,7 +42,7 @@ class ItemJsonTest {
                 .vatRate(this.vatRate)
                 .build();
 
-        String json
+        String expectedJsonString
                 = "{\n"
                 + "    \"description\": \"Toyota Fortuner 3.0V AT 2014 "
                 + "TRD สีเทา ดีเซล 3,000 cc. เกียร์ออโต้\",\n"
@@ -54,7 +54,7 @@ class ItemJsonTest {
 
         JsonConverter jsonConverter = new JsonConverter();
 
-        assertEquals(json, jsonConverter.toJson(item));
+        assertEquals(expectedJsonString, jsonConverter.toJson(item));
     }
 
 }
