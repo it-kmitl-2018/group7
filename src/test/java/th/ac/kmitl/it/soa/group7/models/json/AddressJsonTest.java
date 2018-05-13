@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import th.ac.kmitl.it.soa.group7.converters.JsonConverter;
 
-class AddressJsonConverterTest {
+class AddressJsonTest {
 
     private String lineOne = "สำนักงานใหญ่ เลขที่ 313/1";
     private String lineTwo = "ถนนรัชดาภิเษก แขวงบุคลโล เขตธนบุรี กรุงเทพมหานคร 10600";
@@ -13,18 +13,18 @@ class AddressJsonConverterTest {
     private String citySubDivisionName = "บุคคโล";
     private String postCode = "10600";
     private String countrySubDivision = "กรุงเทพมหานคร";
-    private String countryName = "TH";
+    private String countryCode = "TH";
 
     @Test
     public void shouldGetAllInfo() {
-        AddressJsonConverter address = AddressJsonConverter.builder()
+        AddressJson address = AddressJson.builder()
                 .lineOne(this.lineOne)
                 .lineTwo(this.lineTwo)
                 .cityName(this.cityName)
                 .citySubDivisionName(this.citySubDivisionName)
                 .postCode(this.postCode)
                 .countrySubDivision(this.countrySubDivision)
-                .countryName(this.countryName)
+                .countryCode(this.countryCode)
                 .build();
 
         assertEquals(this.lineOne, address.lineOne);
@@ -33,23 +33,23 @@ class AddressJsonConverterTest {
         assertEquals(this.citySubDivisionName, address.citySubDivisionName);
         assertEquals(this.postCode, address.postCode);
         assertEquals(this.countrySubDivision, address.countrySubDivision);
-        assertEquals(this.countryName, address.countryName);
+        assertEquals(this.countryCode, address.countryCode);
     }
 
     @Test
     public void shouldGetCorrectJson() {
 
-        AddressJsonConverter address = AddressJsonConverter.builder()
+        AddressJson address = AddressJson.builder()
                 .lineOne(this.lineOne)
                 .lineTwo(this.lineTwo)
                 .cityName(this.cityName)
                 .citySubDivisionName(this.citySubDivisionName)
                 .postCode(this.postCode)
                 .countrySubDivision(this.countrySubDivision)
-                .countryName(this.countryName)
+                .countryCode(this.countryCode)
                 .build();
 
-        String json
+        String expectedJsonString
                 = "{\n"
                 + "    \"line_one\": \"สำนักงานใหญ่ เลขที่ 313/1\",\n"
                 + "    \"line_two\": \"ถนนรัชดาภิเษก แขวงบุคลโล เขตธนบุรี "
@@ -63,7 +63,7 @@ class AddressJsonConverterTest {
 
         JsonConverter jsonConverter = new JsonConverter();
 
-        assertEquals(json, jsonConverter.toJson(address));
+        assertEquals(expectedJsonString, jsonConverter.toJson(address));
     }
 
 }

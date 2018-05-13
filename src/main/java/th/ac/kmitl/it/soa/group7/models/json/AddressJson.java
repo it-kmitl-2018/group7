@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
 
 @Builder
-public class AddressJsonConverter {
+public class AddressJson {
 
     @JsonProperty("line_one")
     public String lineOne;
@@ -24,6 +24,6 @@ public class AddressJsonConverter {
     @JsonProperty("country_sub_division")
     public String countrySubDivision;
 
-    @JsonProperty("country_name")
-    public String countryName;
+    @JsonProperty("country_code")
+    public String countryCode;
 }
