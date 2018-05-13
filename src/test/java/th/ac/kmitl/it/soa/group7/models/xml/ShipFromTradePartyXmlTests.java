@@ -4,9 +4,9 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class ShipFromTradePartyXmlTests {
-	private String id;
-	private String globalId;
-	private String name;
+	private String id = "123456789012300000";
+	private String globalId = "ABCDEFGHIJKLMNOPQRST123456789012345";
+	private String name = "บริษัทเครียดเลยจะเอฟแล้ว";
 
 	@Test
 	public void shouldGetCorrectXml() {
