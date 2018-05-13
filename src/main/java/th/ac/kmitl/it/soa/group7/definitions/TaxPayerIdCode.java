@@ -3,7 +3,7 @@ package th.ac.kmitl.it.soa.group7.definitions;
 import lombok.Getter;
 
 @Getter
-public enum TaxpayerIdCode {
+public enum TaxPayerIdCode {
     TAX_ID("TXID", "เลขประจำตัวผู้เสียภาษีอากรสำหรับนิติบุคคล 13 หลัก รวมเลขสาขาอีก 5 หลัก", "Tax ID"),
     ID_CARD_NUMBER("NIDN", "เลขประจำตัวประชาชน 13 หลัก (สำหรับบุคคลธรรมดา)", "National Registration Identification Number"),
     PASSPORT_NUMBER("CCPT", "เลขหนังสือเดินทาง (Passport)", "Number assigned by an authority to identify the passport number of a person"),
@@ -13,7 +13,7 @@ public enum TaxpayerIdCode {
     public String nameTh;
     public String nameEn;
     
-    TaxpayerIdCode(String taxpayerIdCode, String nameTh, String nameEn) {
+    TaxPayerIdCode(String taxpayerIdCode, String nameTh, String nameEn) {
 		this.taxpayerIdCode = taxpayerIdCode;
 		this.nameTh = nameTh;
 		this.nameEn = nameEn;
