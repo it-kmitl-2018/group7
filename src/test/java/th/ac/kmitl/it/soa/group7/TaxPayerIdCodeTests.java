@@ -8,10 +8,10 @@ import th.ac.kmitl.it.soa.group7.definitions.TaxPayerIdCode;
 public class TaxPayerIdCodeTests {
 	@Test
 	public void TaxPayerIdCodeOutputMatchTest() {
-		Assert.assertEquals(TaxPayerIdCode.TAX_ID.getTaxpayerIdCode(), "TXID");
-		Assert.assertEquals(TaxPayerIdCode.ID_CARD_NUMBER.getTaxpayerIdCode(), "NIDN");
-		Assert.assertEquals(TaxPayerIdCode.PASSPORT_NUMBER.getTaxpayerIdCode(), "CCPT");
-		Assert.assertEquals(TaxPayerIdCode.OTHER_ID_SCHEMA.getTaxpayerIdCode(), "OTHR");
+		Assert.assertEquals(TaxPayerIdCode.TAX_ID.getTaxPayerIdCode(), "TXID");
+		Assert.assertEquals(TaxPayerIdCode.ID_CARD_NUMBER.getTaxPayerIdCode(), "NIDN");
+		Assert.assertEquals(TaxPayerIdCode.PASSPORT_NUMBER.getTaxPayerIdCode(), "CCPT");
+		Assert.assertEquals(TaxPayerIdCode.OTHER_ID_SCHEMA.getTaxPayerIdCode(), "OTHR");
 	}
 
 }

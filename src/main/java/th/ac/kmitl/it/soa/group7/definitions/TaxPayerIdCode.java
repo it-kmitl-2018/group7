@@ -9,12 +9,12 @@ public enum TaxPayerIdCode {
     PASSPORT_NUMBER("CCPT", "เลขหนังสือเดินทาง (Passport)", "Number assigned by an authority to identify the passport number of a person"),
     OTHER_ID_SCHEMA("OTHR", "ตัวระบุอื่นๆใช้ในการระบุเอกลักษณ์ผู้ซื้อนอกเหนือจาก Scheme TXID NIDN CCPT", "Other Identification scheme");
 	
-    public String taxpayerIdCode;
+    public String taxPayerIdCode;
     public String nameTh;
     public String nameEn;
     
-    TaxPayerIdCode(String taxpayerIdCode, String nameTh, String nameEn) {
-		this.taxpayerIdCode = taxpayerIdCode;
+    TaxPayerIdCode(String taxPayerIdCode, String nameTh, String nameEn) {
+		this.taxPayerIdCode = taxPayerIdCode;
 		this.nameTh = nameTh;
 		this.nameEn = nameEn;
 	}
