@@ -5,9 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import th.ac.kmitl.it.soa.group7.converters.JsonConverter;
 
-class ItemJsonConverterTest {
+class ItemJsonTest {
 
-    private String description = "Toyota Fortuner 3.0V AT 2014 TRD สีเทา ดีเซล 3,000 cc. เกียร์ออโต้";
+    private String description = "Toyota Fortuner 3.0V AT 2014 TRD สีเทา "
+            + "ดีเซล 3,000 cc. เกียร์ออโต้";
     private int quantity = 1;
     private float pricePerItem = 3990000;
     private boolean haveVat = true;
@@ -15,7 +16,7 @@ class ItemJsonConverterTest {
 
     @Test
     public void shouldGetAllInfo() {
-        ItemJsonConverter item = ItemJsonConverter.builder()
+        ItemJson item = ItemJson.builder()
                 .description(this.description)
                 .quantity(this.quantity)
                 .pricePerItem(this.pricePerItem)
@@ -33,7 +34,7 @@ class ItemJsonConverterTest {
     @Test
     public void shouldGetCorrectJson() {
 
-        ItemJsonConverter item = ItemJsonConverter.builder()
+        ItemJson item = ItemJson.builder()
                 .description(this.description)
                 .quantity(this.quantity)
                 .pricePerItem(this.pricePerItem)
