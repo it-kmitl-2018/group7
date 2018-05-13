@@ -4,14 +4,14 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class NoteJsonConverterTest {
+public class NoteJsonTest {
     
     private String subject;
     private String content;
 
     @Test
     public void shouldGetAllInfo() {
-        NoteJsonConverter note = NoteJsonConverter.builder()
+        NoteJson note = NoteJson.builder()
                 .content(this.content)
                 .subject(this.subject)
                 .build();
