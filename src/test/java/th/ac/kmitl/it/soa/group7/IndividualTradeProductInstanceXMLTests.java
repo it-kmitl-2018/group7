@@ -12,6 +12,7 @@ public class IndividualTradeProductInstanceXMLTests {
 	private Timestamp expiryDateTime = new Timestamp(System.currentTimeMillis());
 
 	@Test
+	public void shouldGetCorrectXML() {
 		IndividualTradeProductInstanceXML individualTradeProductInstance = IndividualTradeProductInstanceXML.builder()
 				.batchId(batchId).expiryDateTime(expiryDateTime).build();
 
