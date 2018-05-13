@@ -8,6 +8,7 @@ public class SellerInformation {
 	public String email;
 	public String telephone;
 	public String fax;
+	private AddressInformation addressInformation;
 
 	public String getTaxId() {
 		return taxId;
@@ -65,4 +66,7 @@ public class SellerInformation {
 		this.fax = fax;
 	}
 
+	public AddressInformation getAddressInformation() {
+		return this.addressInformation;
+	}
 }
