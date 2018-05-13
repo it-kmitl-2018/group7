@@ -10,14 +10,14 @@ public class InvoiceeTradePartyXmlTests {
 
 	@Test
 	public void shouldCorrectXML() {
-		InvoiceeTradePartyXml sellerTradeParty = InvoiceeTradePartyXml.builder()
+		InvoiceeTradePartyXml invoiceeTradeParty = InvoiceeTradePartyXml.builder()
 				.id(id)
 				.globalId(globalId)
 				.name(name)
 				.build();
 
-		Assert.assertEquals(this.id, sellerTradeParty.id);
-		Assert.assertEquals(this.globalId, sellerTradeParty.globalId);
-		Assert.assertEquals(this.name, sellerTradeParty.name);
+		Assert.assertEquals(this.id, invoiceeTradeParty.id);
+		Assert.assertEquals(this.globalId, invoiceeTradeParty.globalId);
+		Assert.assertEquals(this.name, invoiceeTradeParty.name);
 	}
 }

@@ -6,7 +6,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import lombok.Builder;
 
 @Builder
-@JacksonXmlRootElement(localName = "ram:SellerTradeParty")
+@JacksonXmlRootElement(localName = "ram:InvoiceeTradeParty")
 public class InvoiceeTradePartyXml {
 	@JacksonXmlProperty(localName = "ram:ID")
 	public String id;
