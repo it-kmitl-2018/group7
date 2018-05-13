@@ -7,7 +7,7 @@ import lombok.Builder;
 
 @Builder
 @JacksonXmlRootElement(localName = "ram:DefinedTradeContact")
-public class DefinedTradeContact {
+public class DefinedTradeContactXML {
 	@JacksonXmlProperty(localName = "ram:PersonName")
 	public String personName;
 	@JacksonXmlProperty(localName = "ram:DepartmentName")
