@@ -9,10 +9,10 @@ class EmailURIUniversalModelTest {
 
     @Test
     public void shoudGetItAllInfo() {
-        EmailURIUniversalModel emailUriUniversalCommunication = 
+        EmailURIUniversalModel emailURIUniversalModel = 
                 new EmailURIUniversalModel();
-        emailUriUniversalCommunication.setUriId(UriId);
+        emailURIUniversalModel.setUriId(UriId);
 
-        assertEquals(this.UriId, emailUriUniversalCommunication.getUriId());
+        assertEquals(this.UriId, emailURIUniversalModel.getUriId());
     }
 }
