@@ -8,6 +8,15 @@ public class SellerInformation {
 	public String email;
 	public String telephone;
 	public String fax;
+	private AddressInformation addressInformation;
+
+	public AddressInformation getAddressInformation() {
+		return addressInformation;
+	}
+
+	public void setAddressInformation(AddressInformation addressInformation) {
+		this.addressInformation = addressInformation;
+	}
 
 	public String getTaxId() {
 		return taxId;
