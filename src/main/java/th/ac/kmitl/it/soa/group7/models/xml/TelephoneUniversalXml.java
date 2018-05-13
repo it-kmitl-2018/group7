@@ -6,8 +6,8 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import lombok.Builder;
 
 @Builder
-@JacksonXmlRootElement(localName = "ram:EmailURIUniversalCommunication")
-public class EmailURIUniversalCommunicationXml {
-	@JacksonXmlProperty(localName = "ram:URIID")
-	public String uriId;
+@JacksonXmlRootElement(localName = "ram:TelephoneUniversalXml")
+public class TelephoneUniversalXml {
+	@JacksonXmlProperty(localName = "ram:PhoneNumber")
+	public String phoneNumber ;
 }
