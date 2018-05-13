@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
 
 @Builder
-public class Item {
+public class ItemJsonConverter {
 
     public String description;
     public int quantity;
