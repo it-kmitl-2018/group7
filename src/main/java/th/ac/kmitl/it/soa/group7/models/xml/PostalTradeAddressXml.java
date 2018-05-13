@@ -1,49 +1,51 @@
 package th.ac.kmitl.it.soa.group7.models.xml;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+
 import lombok.Builder;
 
-import java.sql.Timestamp;
 
 @Builder
+@JacksonXmlRootElement(localName = "ram:PostalTradeAddress")
 public class PostalTradeAddressXml {
 
-    @JacksonXmlProperty(localName = "postCode")
+    @JacksonXmlProperty(localName = "ram:PostCode")
     public String postCode;
 
-    @JacksonXmlProperty(localName = "buildingName")
+    @JacksonXmlProperty(localName = "ram:BuildingName")
     public String buildingName;
 
-    @JacksonXmlProperty(localName = "lineOne")
+    @JacksonXmlProperty(localName = "ram:LineOne")
     public String lineOne;
 
-    @JacksonXmlProperty(localName = "lineTwo")
+    @JacksonXmlProperty(localName = "ram:LineTwo")
     public String lineTwo;
 
-    @JacksonXmlProperty(localName = "lineThree")
+    @JacksonXmlProperty(localName = "ram:LineThree")
     public String lineThree;
 
-    @JacksonXmlProperty(localName = "lineFour")
+    @JacksonXmlProperty(localName = "ram:LineFour")
     public String lineFour;
 
-    @JacksonXmlProperty(localName = "lineFive")
+    @JacksonXmlProperty(localName = "ram:LineFive")
     public String lineFive;
 
-    @JacksonXmlProperty(localName = "streetName")
+    @JacksonXmlProperty(localName = "ram:StreetName")
     public String streetName;
 
-    @JacksonXmlProperty(localName = "cityName")
+    @JacksonXmlProperty(localName = "ram:CityName")
     public String cityName;
 
-    @JacksonXmlProperty(localName = "citySubDivisionName")
+    @JacksonXmlProperty(localName = "ram:CitySubDivisionName")
     public String citySubDivisionName;
     
-    @JacksonXmlProperty(localName = "countryId")
+    @JacksonXmlProperty(localName = "ram:CountryIDschemeID=\"3166-1 alpha-2\"")
     public String countryId;
     
-    @JacksonXmlProperty(localName = "countrySubDivisionId")
+    @JacksonXmlProperty(localName = "ram:CountrySubDivisionID")
     public String countrySubDivisionId;
     
-    @JacksonXmlProperty(localName = "buildingNumber")
+    @JacksonXmlProperty(localName = "ram:BuildingNumber")
     public String buildingNumber;
 }
