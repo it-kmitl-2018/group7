@@ -1,5 +1,8 @@
 package th.ac.kmitl.it.soa.group7.definitions;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import lombok.Getter;
 
 @Getter
@@ -18,4 +21,15 @@ public enum TaxPayerIdCode {
 		this.nameTh = nameTh;
 		this.nameEn = nameEn;
 	}
+    
+    public static Map<String, TaxPayerIdCode> mapper = new HashMap<>();
+    static {
+        for (TaxPayerIdCode taxPayerIdCode : TaxPayerIdCode.values()) {
+            mapper.put(taxPayerIdCode.getTaxPayerIdCode(), taxPayerIdCode);
+        }
+    }
+
+    public static TaxPayerIdCode parse(String code) {
+        return mapper.get(code);
+    }
 }
