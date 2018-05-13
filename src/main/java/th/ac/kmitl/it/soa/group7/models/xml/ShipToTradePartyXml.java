@@ -6,8 +6,8 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import lombok.Builder;
 
 @Builder
-@JacksonXmlRootElement(localName = "ram:ShipFromTradeParty")
-public class ShipFromTradePartyXml {
+@JacksonXmlRootElement(localName = "ram:ShipToTradeParty")
+public class ShipToTradePartyXml {
 	@JacksonXmlProperty(localName = "ram:ID")
 	public String id;
 	@JacksonXmlProperty(localName = "ram:GlobalID")
