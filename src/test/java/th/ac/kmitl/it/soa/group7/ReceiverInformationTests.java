@@ -14,6 +14,8 @@ public class ReceiverInformationTests {
 
 		receiverInformation.setName("ธนาคารเกียรตินาคิน จำกัด (มหาชน)");
 		receiverInformation.setId("0107536000986");
+		receiverInformation.setEmail("test@mail.com");
+		receiverInformation.setTelePhone("02-5255433");
 		receiverInformation.setBranch("00000");
 		addressInformation.setAddressLineOne("500 ถนนเพลินจิต");
 		addressInformation.setAddressLineTwo("แขวงลุมพินี เขตปทุมวัน กรุงเทพมหานคร 10330");
@@ -22,6 +24,8 @@ public class ReceiverInformationTests {
 		Assert.assertEquals(receiverInformation.getName(), "ธนาคารเกียรตินาคิน จำกัด (มหาชน)");
 		Assert.assertEquals(receiverInformation.getId(), "0107536000986");
 		Assert.assertEquals(receiverInformation.getBranch(), "00000");
+		Assert.assertEquals(receiverInformation.getEmail(), "test@mail.com");
+		Assert.assertEquals(receiverInformation.getTelePhone(), "02-5255433");
 
 		Assert.assertEquals(receiverInformation.getAddressInformation().getAddressLineOne(), "500 ถนนเพลินจิต");
 		Assert.assertEquals(receiverInformation.getAddressInformation().getAddressLineTwo(),
