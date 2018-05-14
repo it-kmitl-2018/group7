@@ -43,4 +43,9 @@ public class TaxInvoiceControllerTests {
 		this.mockMvc.perform(get("/confirm")).andDo(print()).andExpect(status().isOk())
 				.andExpect(content().string(containsString("Tax invoice")));
 	}
+
+	@Test
+	public void shouldGotoGenerateIndividualTradeProductInstanceXML() throws Exception {
+		this.mockMvc.perform(get("/generate/individualTradeProductInstance")).andExpect(status().isOk());
+	}
 }
