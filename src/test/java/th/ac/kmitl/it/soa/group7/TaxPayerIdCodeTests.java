@@ -22,7 +22,7 @@ public class TaxPayerIdCodeTests {
 	public void shouldThrowIllegalArgumentExceptionWhenParsingNotExistedCode() {
 		IllegalArgumentException e = assertThrows(IllegalArgumentException.class,
 				() -> TaxPayerIdCode.parse("Fighting!!"));
-		assertThat(e.getMessage(), containsString("Parsing not existed code"));
+		assertThat(e.getMessage(), containsString("TaxPayerIdCode not exist"));
 	}
 	
 }
