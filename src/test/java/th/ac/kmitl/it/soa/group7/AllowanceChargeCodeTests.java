@@ -31,6 +31,6 @@ public class AllowanceChargeCodeTests {
 	public void shouldThrowIllegalArgumentExceptionWhenParsingNotExistedCode() {
 		IllegalArgumentException e = assertThrows(IllegalArgumentException.class,
 				() -> AllowanceChargeCode.parse(1412));
-		assertThat(e.getMessage(), containsString("Parsing not existed code"));
+		assertThat(e.getMessage(), containsString("AllowanceChargeCode not exist"));
 	}
 }
