@@ -34,7 +34,7 @@ public class TaxInvoiceController {
 	@ResponseBody
 	public String individualTradeProductInstanceXML(@RequestParam Map<String, String> allRequestParam, ModelMap model) {
 		IndividualTradeProductInstanceXML individualTradeProductInstance = IndividualTradeProductInstanceXML.builder()
-				.batchId(allRequestParam.get("id")).expiryDateTime(allRequestParam.get("globalId")).build();
+				.batchId(allRequestParam.get("batchId")).expiryDateTime(allRequestParam.get("expiryDateTime")).build();
 		return individualTradeProductInstance.toString();
 	}
 }
