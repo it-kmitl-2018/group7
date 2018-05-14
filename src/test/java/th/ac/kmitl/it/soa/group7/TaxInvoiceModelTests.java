@@ -13,7 +13,7 @@ public class TaxInvoiceModelTests {
 		TaxInvoiceModel taxInvoiceModel = new TaxInvoiceModel();
 		BuyerInformation buyerInformation = new BuyerInformation();
 		SellerInformation sellerInformation = new SellerInformation();
-		taxInvoiceModel.setItem(buyerInformation, sellerInformation);
+		taxInvoiceModel.setBuyerAndSellerInformation(buyerInformation, sellerInformation);
 
 		Assert.assertEquals(taxInvoiceModel.getNumber(), "Tax invoice No. from Header");
 		Assert.assertNotNull(taxInvoiceModel.getSeller());
