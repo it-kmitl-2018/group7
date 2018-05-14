@@ -15,6 +15,16 @@ public class ProductInfomationTest {
     }
     
     @Test
+    public void productInfomationNullTest(){
+        assertNull(productInfomation.getProductId());
+        assertNull(productInfomation.getProductGlobalId());
+        assertNull(productInfomation.getProductName());
+        assertNull(productInfomation.getProductBatchId());
+        assertNull(productInfomation.getProductExpiryDateTime());
+        assertNull(productInfomation.getProductOriginCountryId());
+    }
+    
+    @Test
     public void productInfomationGetSetTest(){
         productInfomation.setProductId("ABCDEFG1234556");
         productInfomation.setProductGlobalId("12345678901234");
