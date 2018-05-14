@@ -7,9 +7,8 @@ public class IncludedNote {
 	public IncludedNote() {
 	}
 	
-	public IncludedNote(String subject, String content) {
-		this.subject = subject;
-		this.content = content;
+	public IncludedNote(String remark) {
+		this.content = remark;
 	}
 	
 	public String getSubject() {
