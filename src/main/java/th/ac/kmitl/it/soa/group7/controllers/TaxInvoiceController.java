@@ -7,6 +7,9 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import th.ac.kmitl.it.soa.group7.models.xml.PayeeTradePartyXml;
 
 @Controller
 public class TaxInvoiceController {
@@ -25,6 +28,17 @@ public class TaxInvoiceController {
 	public String create(@RequestParam Map<String, String> allRequestParam, ModelMap model) {
 		model.addAllAttributes(allRequestParam);
 		return "confirm";
+	}
+	
+	@GetMapping(path = "/generate/payeeTradePartyXml")
+	@ResponseBody
+	public String PayeeTradePartyXml(@RequestParam Map<String, String> allRequestParam, ModelMap model) {
+		PayeeTradePartyXml payeeTradePartyXml = PayeeTradePartyXml.builder()
+				.id(allRequestParam.get("id"))
+				.globalId("globalId")
+				.name("name")
+				.build();
+		return payeeTradePartyXml.toString();
 	}
 
 }
