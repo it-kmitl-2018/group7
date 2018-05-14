@@ -33,7 +33,7 @@ public class TaxInvoiceController {
 	@PostMapping(path = "/generate")
 	@ResponseBody
 	public String generateXML(@RequestParam Map<String, String> allRequestParam, ModelMap model) {
-		return "Hello world";
+		return "This is where xml showed";
 	}
 
 	@GetMapping(path = "/generate/specifiedTradeProductXML")
