@@ -43,6 +43,6 @@ public class PurposeCodeTests {
 	public void shouldThrowIllegalArgumentExceptionWhenParsingNotExistedCode() {
 		IllegalArgumentException e = assertThrows(IllegalArgumentException.class,
 				() -> PurposeCode.parse("Fighting!!"));
-		assertThat(e.getMessage(), containsString("Parsing not existed code"));
+		assertThat(e.getMessage(), containsString("PurposeCode not exist"));
 	}
 }

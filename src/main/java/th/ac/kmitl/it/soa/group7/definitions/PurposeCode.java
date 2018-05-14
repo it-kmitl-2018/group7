@@ -52,7 +52,7 @@ public enum PurposeCode {
     	PurposeCode codeEnum = mapper.get(code);
 
         if (codeEnum == null) {
-            throw new IllegalArgumentException("Parsing not existed code " + code);
+            throw new IllegalArgumentException("PurposeCode not exist" + code);
         }
         return mapper.get(code);
     }
