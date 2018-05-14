@@ -41,7 +41,7 @@ public class TaxInvoiceModel {
 		return "List of items";
 	}
 
-	public void setItem(BuyerInformation buyerInformation, SellerInformation sellerInformation) {
+	public void setBuyerAndSellerInformation(BuyerInformation buyerInformation, SellerInformation sellerInformation) {
 		this.list.add(sellerInformation);
 		this.list.add(buyerInformation);
 	}
