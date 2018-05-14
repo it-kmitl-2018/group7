@@ -1,5 +1,8 @@
 package th.ac.kmitl.it.soa.group7.definitions;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import lombok.Getter;
 
 @Getter
@@ -27,6 +30,22 @@ public enum AllowanceChargeCode {
         this.code = code;
         this.descriptionTh = descriptionTh;
         this.descriptionEn = descriptionEn;
+    }
+    
+    public static Map<Integer, AllowanceChargeCode> mapper = new HashMap<>();
+    static {
+        for (AllowanceChargeCode referenceCode : AllowanceChargeCode.values()) {
+            mapper.put(referenceCode.getCode(), referenceCode);
+        }
+    }
+
+    public static AllowanceChargeCode parse(int code) {
+    	AllowanceChargeCode codeEnum = mapper.get(code);
+
+        if (codeEnum == null) {
+            throw new IllegalArgumentException("Parsing not existed code " + code);
+        }
+        return mapper.get(code);
     }
     
 }
