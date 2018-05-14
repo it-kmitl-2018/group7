@@ -3,6 +3,10 @@ package th.ac.kmitl.it.soa.group7;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.junit.Assert.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
+
 import th.ac.kmitl.it.soa.group7.definitions.PurposeCode;
 
 public class PurposeCodeTests {
@@ -33,5 +37,12 @@ public class PurposeCodeTests {
 		Assert.assertEquals(PurposeCode.RETURN_PRODUCT_OR_SERVICE_CANCELLATION_ALL.getPurposeCode(), "RCTC03");
 		Assert.assertEquals(PurposeCode.RETURN_PRODUCT_OR_SERVICE_CANCELLATION_SOME.getPurposeCode(), "RCTC04");
 		Assert.assertEquals(PurposeCode.OTHER_REASON_AT_RECEIPT.getPurposeCode(), "RCTC99");
+	}
+	
+	@Test
+	public void shouldThrowIllegalArgumentExceptionWhenParsingNotExistedCode() {
+		IllegalArgumentException e = assertThrows(IllegalArgumentException.class,
+				() -> PurposeCode.parse("Fighting!!"));
+		assertThat(e.getMessage(), containsString("Parsing not existed code"));
 	}
 }

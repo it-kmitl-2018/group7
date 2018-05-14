@@ -1,5 +1,8 @@
 package th.ac.kmitl.it.soa.group7.definitions;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import lombok.Getter;
 
 @Getter
@@ -37,5 +40,22 @@ public enum PurposeCode {
         this.purposeCode = purposeCode;
         this.nameTh = nameTh;
     }
+    
+    public static Map<String, PurposeCode> mapper = new HashMap<>();
+    static {
+        for (PurposeCode purposeCode : PurposeCode.values()) {
+            mapper.put(purposeCode.getPurposeCode(), purposeCode);
+        }
+    }
+
+    public static PurposeCode parse(String code) {
+    	PurposeCode codeEnum = mapper.get(code);
+
+        if (codeEnum == null) {
+            throw new IllegalArgumentException("Parsing not existed code " + code);
+        }
+        return mapper.get(code);
+    }
+    
 }
 
