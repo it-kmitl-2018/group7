@@ -4,13 +4,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class EmailURIUniversalModelTest {
+class EmailModelTest {
     private String UriId = "58070040@kmitl.ac.th";
 
     @Test
     public void shoudGetItAllInfo() {
-        EmailURIUniversalModel emailURIUniversalModel = 
-                new EmailURIUniversalModel();
+        EmailModel emailURIUniversalModel = 
+                new EmailModel();
         emailURIUniversalModel.setUriId(UriId);
 
         assertEquals(this.UriId, emailURIUniversalModel.getUriId());
