@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div>
-		<form action="/generate" method="post">
+		<form action="/generate" th:action="@{/generate/}" method="post">
 
 			<p th:text="'รหัสคู่มือมาตรฐาน : ' + ${manualId}" />
 			<p th:text="'เลขที่เอกสาร : ' + ${documentId}" />
