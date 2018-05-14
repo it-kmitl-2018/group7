@@ -43,4 +43,9 @@ public class TaxInvoiceControllerTests {
 		this.mockMvc.perform(get("/confirm")).andDo(print()).andExpect(status().isOk())
 				.andExpect(content().string(containsString("Tax invoice")));
 	}
+
+	@Test
+	public void shouldGenerateXML() throws Exception {
+		this.mockMvc.perform(get("/generate")).andExpect(status().isOk());
+	}
 }
