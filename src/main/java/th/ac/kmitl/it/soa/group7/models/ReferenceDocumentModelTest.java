@@ -25,34 +25,34 @@ public class ReferenceDocumentModelTest {
     
     @Test
     private void referenceDocIdNullTest(){
-        assertNull(referenceDocumentModel.getReferenceDocId());
+        assertNull(referenceDocumentModel.getReferenceDocumentId());
     }
     
     @Test
     private void referenceDocIdGetTest(){
-        referenceDocumentModel.setReferenceDocId("ABCDEFGHIJKLMNOPQRST123456789012345");
-        assertEquals("ABCDEFGHIJKLMNOPQRST123456789012345", referenceDocumentModel.getReferenceDocId());
+        referenceDocumentModel.setReferenceDocumentId("ABCDEFGHIJKLMNOPQRST123456789012345");
+        assertEquals("ABCDEFGHIJKLMNOPQRST123456789012345", referenceDocumentModel.getReferenceDocumentId());
     }
     
     @Test
     private void referenceDocDateNullTest(){
-        assertNull(referenceDocumentModel.getReferenceDocDate());
+        assertNull(referenceDocumentModel.getReferenceDocumentDate());
     }
     
     @Test
     private void referenceDocDateGetTest(){
-        referenceDocumentModel.setReferenceDocDate("2002-07-21T08:35:30");
-        assertEquals("2002-07-21T08:35:30", referenceDocumentModel.getReferenceDocDate());
+        referenceDocumentModel.setReferenceDocumentDate("2002-07-21T08:35:30");
+        assertEquals("2002-07-21T08:35:30", referenceDocumentModel.getReferenceDocumentDate());
     }
     
     @Test
     private void referenceDocTypeCodeNullTest(){
-        assertNull(referenceDocumentModel.getReferenceDocTypeCode());
+        assertNull(referenceDocumentModel.getReferenceDocumentTypeCode());
     }
     
     @Test
     private void referenceDocTypeCodeGetTest(){
-        referenceDocumentModel.setReferenceDocTypeCode("ALQ");
-        assertEquals("ALQ", referenceDocumentModel.getReferenceDocTypeCode());
+        referenceDocumentModel.setReferenceDocumentTypeCode("ALQ");
+        assertEquals("ALQ", referenceDocumentModel.getReferenceDocumentTypeCode());
     }
 }
