@@ -1,48 +1,27 @@
 package th.ac.kmitl.it.soa.group7.models;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
+import lombok.Builder;
+import th.ac.kmitl.it.soa.group7.models.json.NoteJson;
+
+@Builder
 public class TaxInvoiceModel {
-	public TaxInvoiceModel() {
-		this.list = new ArrayList<Object>();
-	}
+	@JsonProperty("number")
+	private String taxNumber;
 
-	private TaxInvoiceModel taxInvoiceModel;
-	private List<Object> list;
+	@JsonProperty("seller")
+	private SellerInformation sellerInformation;
 
-	// TODO implement Header to model
-	public Object getNumber() {
-		return "Tax invoice No. from Header";
-	}
+	@JsonProperty("buyer")
+	private BuyerInformation buyerInfo;
 
-	// TODO implement Seller to model
-	public SellerInformation getSeller() {
-		return new SellerInformation();
-	}
+	@JsonProperty("transaction_date")
+	private Object transactionDate;
 
-	// TODO implement Buyer to model
-	public BuyerInformation getBuyer() {
-		return new BuyerInformation();
-	}
+	@JsonProperty("note")
+	private NoteJson note;
 
-	// TODO implement TransactionDate to model
-	public Object getTransactionDate() {
-		return "transaction_date";
-	}
-
-	// TODO implement Note to model
-	public Object getNote() {
-		return "note";
-	}
-
-	// TODO implement Items to model
-	public Object getItems() {
-		return "List of items";
-	}
-
-	public void setBuyerAndSellerInformation(BuyerInformation buyerInformation, SellerInformation sellerInformation) {
-		this.list.add(sellerInformation);
-		this.list.add(buyerInformation);
-	}
+	@JsonProperty("items")
+	private Object items;
 }
