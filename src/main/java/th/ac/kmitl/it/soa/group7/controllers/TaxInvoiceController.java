@@ -33,9 +33,16 @@ public class TaxInvoiceController {
 	@PostMapping(path = "/generate")
 	@ResponseBody
 	public String generateXML(@RequestParam Map<String, String> allRequestParam, ModelMap model) {
+		return "Hello world";
+	}
+
+	@GetMapping(path = "/generate/specifiedTradeProductXML")
+	@ResponseBody
+	public String specifiedTradeProductXML(@RequestParam Map<String, String> allRequestParam, ModelMap model) {
 		SpecifiedTradeProductXML specifiedTradeProduct = SpecifiedTradeProductXML.builder()
 				.id(allRequestParam.get("id")).globalId(allRequestParam.get("globalId"))
 				.name(allRequestParam.get("name")).description(allRequestParam.get("description")).build();
+		System.out.println(specifiedTradeProduct.toString());
 		return specifiedTradeProduct.toString();
 	}
 }
