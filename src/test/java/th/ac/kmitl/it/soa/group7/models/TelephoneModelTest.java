@@ -4,14 +4,14 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class TelephoneUniversalModelTest {
+class TelephoneModelTest {
 
     private String phoneNumber = "0812345678";
 
     @Test
     public void shoudGetItAllInfo() {
-        TelephoneUniversalModel telephoneUniversalModel
-                = new TelephoneUniversalModel();
+        TelephoneModel telephoneUniversalModel
+                = new TelephoneModel();
         telephoneUniversalModel.setPhoneNumber(phoneNumber);
 
         assertEquals(this.phoneNumber,
