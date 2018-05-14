@@ -13,5 +13,5 @@ public class IndividualTradeProductInstanceXML {
 	@JacksonXmlProperty(localName = "ram:BatchID")
 	public String batchId;
 	@JacksonXmlProperty(localName = "ram:ExpiryDateTime")
-	public Timestamp expiryDateTime;
+	public String expiryDateTime;
 }
