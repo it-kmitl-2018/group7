@@ -1,7 +1,5 @@
 package th.ac.kmitl.it.soa.group7.models.xml;
 
-import java.sql.Timestamp;
-
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
