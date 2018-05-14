@@ -45,7 +45,12 @@ public class TaxInvoiceControllerTests {
 	}
 
 	@Test
-	public void shouldGenerateXML() throws Exception {
+	public void shouldGotoGenerateXML() throws Exception {
 		this.mockMvc.perform(get("/generate")).andExpect(status().isOk());
+	}
+
+	@Test
+	public void shouldGotoGenerateSpecifiedTradeProductXML() throws Exception {
+		this.mockMvc.perform(get("/generate/specifiedTradeProduct")).andExpect(status().isOk());
 	}
 }
