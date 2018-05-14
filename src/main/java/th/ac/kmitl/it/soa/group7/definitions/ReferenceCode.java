@@ -1,5 +1,8 @@
 package th.ac.kmitl.it.soa.group7.definitions;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import lombok.Getter;
 
 @Getter
@@ -24,5 +27,21 @@ public enum ReferenceCode {
 		this.descriptionTh = descriptionTh;
 		this.descriptionEn = descriptionEn;
 	}
+	
+	public static Map<String, ReferenceCode> mapper = new HashMap<>();
+    static {
+        for (ReferenceCode referenceCode : ReferenceCode.values()) {
+            mapper.put(referenceCode.getCode(), referenceCode);
+        }
+    }
+
+    public static ReferenceCode parse(String code) {
+    	ReferenceCode codeEnum = mapper.get(code);
+
+        if (codeEnum == null) {
+            throw new IllegalArgumentException("Parsing not existed code " + code);
+        }
+        return mapper.get(code);
+    }
 
 }

@@ -2,6 +2,11 @@ package th.ac.kmitl.it.soa.group7;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.junit.Assert.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
+
 import th.ac.kmitl.it.soa.group7.definitions.ReferenceCode;
 
 
@@ -17,5 +22,12 @@ public class ReferenceCodeTests {
 		Assert.assertEquals(ReferenceCode.DEBIT_NOTE_NUMBER.getCode(), "DL");
 		Assert.assertEquals(ReferenceCode.CREDIT_NOTE_NUMBER.getCode(), "CD");
 		Assert.assertEquals(ReferenceCode.MUTUAL_REFERENCE_NUMBER.getCode(), "ZZZ");
+	}
+	
+	@Test
+	public void shouldThrowIllegalArgumentExceptionWhenParsingNotExistedCode() {
+		IllegalArgumentException e = assertThrows(IllegalArgumentException.class,
+				() -> ReferenceCode.parse("Fighting!!"));
+		assertThat(e.getMessage(), containsString("Parsing not existed code"));
 	}
 }
