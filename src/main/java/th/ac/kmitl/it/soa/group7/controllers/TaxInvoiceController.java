@@ -33,7 +33,7 @@ public class TaxInvoiceController {
 
 	@GetMapping(path = "/generate/applicableTradeTaxXML")
 	@ResponseBody
-	public String specifiedTradeProductXML(@RequestParam Map<String, String> allRequestParam, ModelMap model) {
+	public String applicableTradeTaxXML(@RequestParam Map<String, String> allRequestParam, ModelMap model) {
 		ApplicableTradeTaxXML applicableTradeTax = ApplicableTradeTaxXML.builder()
 				.documentType(DocumentType.TAX_INVOICE).calculatedRate(allRequestParam.get("calculatedRate"))
 				.basisAmount(allRequestParam.get("basisAmount"))
