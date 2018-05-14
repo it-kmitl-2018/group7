@@ -18,6 +18,7 @@ public class TaxInvoiceModelTests {
 	private String fax = "02-1655555";
 
 	@Test
+	public void shouldGetCorrectJson() throws JSONException {
 		BuyerInformation buyerInformation = BuyerInformation.builder().taxId(this.taxId).storeBranch(storeBranch)
 				.nameEng(nameEng).nameTh(nameTh).email(email).telephone(telephone).fax(fax).build();
 
