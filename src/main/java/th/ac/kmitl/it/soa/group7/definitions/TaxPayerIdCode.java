@@ -30,6 +30,11 @@ public enum TaxPayerIdCode {
     }
 
     public static TaxPayerIdCode parse(String code) {
+    	TaxPayerIdCode codeEnum = mapper.get(code);
+
+        if (codeEnum == null) {
+            throw new IllegalArgumentException("TaxPayerIdCode not exist " + code);
+        }
         return mapper.get(code);
     }
 }
