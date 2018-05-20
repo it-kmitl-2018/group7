@@ -1,16 +1,27 @@
 package th.ac.kmitl.it.soa.group7.models;
 
-public class TaxInvoiceModel {// Collect Tax Invoice details
-	public TaxInvoiceModel() {
-	}
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-	private String documentTypeCode;
+import lombok.Builder;
+import th.ac.kmitl.it.soa.group7.models.json.NoteJson;
 
-	public void setDocumentTypeCode(String documentTypeCode) {// Set typeCode
-		this.documentTypeCode = documentTypeCode;
-	}
+@Builder
+public class TaxInvoiceModel {
+	@JsonProperty("number")
+	private String taxNumber;
 
-	public String getDocumentTypeCode() {// Get typeCode
-		return documentTypeCode;
-	}
+	@JsonProperty("seller")
+	private SellerInformation sellerInformation;
+
+	@JsonProperty("buyer")
+	private BuyerInformation buyerInfo;
+
+	@JsonProperty("transaction_date")
+	private Object transactionDate;
+
+	@JsonProperty("note")
+	private NoteJson note;
+
+	@JsonProperty("items")
+	private Object items;
 }
