@@ -1,68 +1,32 @@
 package th.ac.kmitl.it.soa.group7.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Builder;
+
+@Builder
 public class BuyerInformation {
+
+	@JsonProperty("tax_number")
 	public String taxId;
+
+	@JsonProperty("branch_number")
 	public String storeBranch;
+
+	@JsonProperty("name_en")
 	public String nameEng;
+
+	@JsonProperty("name_th")
 	public String nameTh;
+
+	@JsonProperty("email")
 	public String email;
+
+	@JsonProperty("telephone")
 	public String telephone;
+
+	@JsonProperty("fax")
 	public String fax;
-	
-	public String getTaxId() {
-		return taxId;
-	}
-	
-	public void setTaxId(String taxId) {
-		this.taxId = taxId;
-	}
-	
-	public String getStoreBranch() {
-		return storeBranch;
-	}
-	
-	public void setStoreBranch(String storeBranch) {
-		this.storeBranch = storeBranch;
-	}
-	
-	public String getNameEng() {
-		return nameEng;
-	}
-	
-	public void setNameEng(String nameEng) {
-		this.nameEng = nameEng;
-	}
-	
-	public String getNameTh() {
-		return nameTh;
-	}
-	
-	public void setNameTh(String nameTh) {
-		this.nameTh = nameTh;
-	}
-	
-	public String getEmail() {
-		return email;
-	}
-	
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	
-	public String getTelephone() {
-		return telephone;
-	}
-	
-	public void setTelephone(String telephone) {
-		this.telephone = telephone;
-	}
-	
-	public String getFax() {
-		return fax;
-	}
-	
-	public void setFax(String fax) {
-		this.fax = fax;
-	}
-	
+
+	@JsonProperty("address")
+	public AddressInformation addressInformation;
 }
