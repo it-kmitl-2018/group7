@@ -7,25 +7,33 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class JsonConverter {
 
-    private ObjectMapper mapper;
-    private DefaultPrettyPrinter.Indenter indenter;
-    private DefaultPrettyPrinter printer;
+	private ObjectMapper mapper;
+	private DefaultPrettyPrinter.Indenter indenter;
+	private DefaultPrettyPrinter printer;
 
-    public JsonConverter() {
-        mapper = new ObjectMapper();
-        indenter = new DefaultIndenter("    ", "\n");
-        printer = new DefaultPrettyPrinter();
+	public JsonConverter() {
+		mapper = new ObjectMapper();
+		indenter = new DefaultIndenter("    ", "\n");
+		printer = new DefaultPrettyPrinter();
+		printer.indentObjectsWith(indenter);
+		printer.indentArraysWith(indenter);
+	}
 
-        printer.indentObjectsWith(indenter);
-        printer.indentArraysWith(indenter);
-    }
+	public String toJson(Object model) {
+		try {
+			return mapper.writer(printer).writeValueAsString(model);
+		} catch (JsonProcessingException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
 
-    public String toJson(Object model) {
-        try {
-            return mapper.writer(printer).writeValueAsString(model);
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
+	public DefaultPrettyPrinter.Indenter getIndenter() {
+		return indenter;
+	}
+
+	public void setIndenter(DefaultPrettyPrinter.Indenter indenter) {
+		this.indenter = indenter;
+	}
+
 }
